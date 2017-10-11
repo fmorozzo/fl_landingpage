@@ -18,7 +18,7 @@ H2 -> 38px
 // to learn more about SASS, visit sass-lang.com
 .navbar {
     text-align: center;
-    transition: al 0.5s ease;
+    transition: all 0.5s ease;
     background-color: theme-color('secondary');
     font-family: Raleway, sans-serif;
 
@@ -125,6 +125,7 @@ H2 -> 38px
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     &:before {
         position: absolute;
@@ -136,6 +137,12 @@ H2 -> 38px
         background-color: rgba(33, 60, 109, .9);
         mix-blend-mode: multiply;
 
+    }
+    @include media-breakpoint-down(sm) {
+        @media screen and (orientation: portrait) {
+            background: url(../../img/png/bg/smartphone_vertical.png) no-repeat center center fixed;
+            min-height: 100%
+        }
     }
 
     .slogan {
@@ -165,6 +172,8 @@ H2 -> 38px
     font-size: 1.125rem;
     font-weight: 700;
 }
+
+.fl-btn-goto {}
 
 .fl-link {
     color: theme-color('primary');
@@ -255,6 +264,10 @@ H2 -> 38px
     }
     &.fl-separation:last-of-type {
         background: url(../../img/png/bg/real-estates2@2x.png) no-repeat center center fixed;
+        margin-bottom: 0;
+        &:before {
+            bottom: -1px;
+        }
     }
     &.fl-testimonials {
         min-height: inherit;
@@ -269,7 +282,7 @@ H2 -> 38px
             margin-bottom: 2rem;
         }
 
-        @media (max-width: map-get($grid-breakpoints, sm)) {
+        @include media-breakpoint-up(sm) {
             .row {
                 text-align: center;
             }
@@ -290,9 +303,27 @@ H2 -> 38px
         min-height: inherit;
         background-color: theme-color("secondary");
         padding-bottom: 1.5rem;
+        padding-top: 0;
+
 
         .container:last-child {
             padding-top: 3rem;
+        }
+        .fl-img-values {
+            width: 500px;
+        }
+        .fl-copy,
+        .fl-follow {
+            text-align: center;
+        }
+        @include media-breakpoint-up(sm) {
+
+            .fl-copy {
+                text-align: left;
+            }
+            .fl-follow {
+                text-align: right;
+            }
         }
     }
 } // Custom classes
@@ -301,10 +332,25 @@ H2 -> 38px
     align-items: flex-end;
 }
 
-.fl-buttons {
+
+.fl-btn-goto,
+.fl-btn-email {
+    padding-right: 40px;
     position: relative;
-    top: 18px;
-    z-index: 1;
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background: transparent no-repeat url('../../img/svg/icon/send.svg') center right;
+    }
+}
+
+.fl-btn-goto:after {
+    background: transparent no-repeat url('../../img/svg/icon/goto.svg') center right;
+
 }
 
 .fl-toggle-btn {
@@ -426,13 +472,40 @@ Social links
  members.html
 */
 
+.members {
+    .fl-main-section {
+        background: url(../../img/png/bg/members.png) no-repeat center center fixed;
+        min-height: 85vh;
+
+        @include media-breakpoint-down(sm) {
+            @media screen and (orientation: portrait) {
+                background: url(../../img/png/bg/smartphone_vertical02.png) no-repeat center center fixed;
+            }
+        }
+    }
+    .fl-footer {
+        padding-top: 71px;
+        .fl-brand-row {
+            padding-bottom: 0;
+        }
+    }
+}
+
 .fl-how-diagram {
-    .fl-parcel-delivery {
+
+    .fl-buttons {
+        position: relative;
+        top: 18px;
+        z-index: 1;
+    }
+    .fl-parcel-delivery,
+    .fl-use-service {
         border: 1px solid theme-color('secondary');
         border-radius: 5px;
         padding-top: 2rem;
         margin-left: 0;
         margin-right: 0;
+        display: none;
 
         .fl-step {}
         .fl-step-number {
@@ -450,7 +523,12 @@ Social links
         .fl-description {
             font-size: 1rem;
         }
-
+        &.active {
+            display: flex;
+        }
+    }
+    .fl-use-service {
+        display: none;
     }
 }
 

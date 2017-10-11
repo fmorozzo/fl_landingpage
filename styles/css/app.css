@@ -6264,7 +6264,7 @@ H2 -> 38px
 */
 .navbar {
   text-align: center;
-  transition: al 0.5s ease;
+  transition: all 0.5s ease;
   background-color: #003a6f;
   font-family: Raleway, sans-serif; }
   .navbar .navbar-collapse {
@@ -6338,7 +6338,8 @@ H2 -> 38px
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .fl-main-section:before {
     position: absolute;
     content: "";
@@ -6348,6 +6349,11 @@ H2 -> 38px
     left: 0;
     background-color: rgba(33, 60, 109, 0.9);
     mix-blend-mode: multiply; }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .fl-main-section {
+    background: url(../../img/png/bg/smartphone_vertical.png) no-repeat center center fixed;
+    min-height: 100%; } }
+
   .fl-main-section .slogan {
     color: #fff;
     font-size: 3rem;
@@ -6438,7 +6444,10 @@ H2 -> 38px
       background-color: rgba(33, 60, 109, 0.9);
       mix-blend-mode: multiply; }
   .fl-section.fl-separation:last-of-type {
-    background: url(../../img/png/bg/real-estates2@2x.png) no-repeat center center fixed; }
+    background: url(../../img/png/bg/real-estates2@2x.png) no-repeat center center fixed;
+    margin-bottom: 0; }
+    .fl-section.fl-separation:last-of-type:before {
+      bottom: -1px; }
   .fl-section.fl-testimonials {
     min-height: inherit;
     padding-top: 0; }
@@ -6448,7 +6457,7 @@ H2 -> 38px
       background-color: #fff;
       height: 0;
       margin-bottom: 2rem; }
-    @media (max-width: 576px) {
+    @media (min-width: 576px) {
       .fl-section.fl-testimonials .row {
         text-align: center; } }
     @media (min-width: 992px) {
@@ -6460,18 +6469,41 @@ H2 -> 38px
   .fl-section.fl-footer {
     min-height: inherit;
     background-color: #003a6f;
-    padding-bottom: 1.5rem; }
+    padding-bottom: 1.5rem;
+    padding-top: 0; }
     .fl-section.fl-footer .container:last-child {
       padding-top: 3rem; }
+    .fl-section.fl-footer .fl-img-values {
+      width: 500px; }
+    .fl-section.fl-footer .fl-copy,
+    .fl-section.fl-footer .fl-follow {
+      text-align: center; }
+    @media (min-width: 576px) {
+      .fl-section.fl-footer .fl-copy {
+        text-align: left; }
+      .fl-section.fl-footer .fl-follow {
+        text-align: right; } }
 
 .fl-justify-end {
   justify-content: flex-end;
   align-items: flex-end; }
 
-.fl-buttons {
-  position: relative;
-  top: 18px;
-  z-index: 1; }
+.fl-btn-goto,
+.fl-btn-email {
+  padding-right: 40px;
+  position: relative; }
+  .fl-btn-goto:after,
+  .fl-btn-email:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: transparent no-repeat url("../../img/svg/icon/send.svg") center right; }
+
+.fl-btn-goto:after {
+  background: transparent no-repeat url("../../img/svg/icon/goto.svg") center right; }
 
 .fl-toggle-btn {
   background-color: #fff;
@@ -6549,13 +6581,32 @@ Social links
 /*
  members.html
 */
-.fl-how-diagram .fl-parcel-delivery {
+.members .fl-main-section {
+  background: url(../../img/png/bg/members.png) no-repeat center center fixed;
+  min-height: 85vh; }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .members .fl-main-section {
+    background: url(../../img/png/bg/smartphone_vertical02.png) no-repeat center center fixed; } }
+
+.members .fl-footer {
+  padding-top: 71px; }
+  .members .fl-footer .fl-brand-row {
+    padding-bottom: 0; }
+
+.fl-how-diagram .fl-buttons {
+  position: relative;
+  top: 18px;
+  z-index: 1; }
+.fl-how-diagram .fl-parcel-delivery,
+.fl-how-diagram .fl-use-service {
   border: 1px solid #003a6f;
   border-radius: 5px;
   padding-top: 2rem;
   margin-left: 0;
-  margin-right: 0; }
-  .fl-how-diagram .fl-parcel-delivery .fl-step-number {
+  margin-right: 0;
+  display: none; }
+  .fl-how-diagram .fl-parcel-delivery .fl-step-number,
+  .fl-how-diagram .fl-use-service .fl-step-number {
     background-color: #ff595a;
     color: #fff;
     font-weight: 500;
@@ -6566,8 +6617,14 @@ Social links
     display: block;
     margin: 0 auto 2rem;
     line-height: 40px; }
-  .fl-how-diagram .fl-parcel-delivery .fl-description {
+  .fl-how-diagram .fl-parcel-delivery .fl-description,
+  .fl-how-diagram .fl-use-service .fl-description {
     font-size: 1rem; }
+  .fl-how-diagram .fl-parcel-delivery.active,
+  .fl-how-diagram .fl-use-service.active {
+    display: flex; }
+.fl-how-diagram .fl-use-service {
+  display: none; }
 
 .fl-services {
   background-color: #f5f5f5; }
