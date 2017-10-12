@@ -270,9 +270,7 @@ H2 -> 38px
         }
     }
     &.fl-testimonials {
-        min-height: inherit;
-        padding-top: 0;
-
+        min-height: inherit; //padding-top: 0;
         .fl-avatar {
             margin-bottom: 1rem;
         }
@@ -444,6 +442,9 @@ Social links
     color: $white;
     .fl-brand-row {
         padding-bottom: 5rem;
+        .fl-logo {
+            //max-width: 251px;
+        }
     }
     .title-widget {
         color: $white;
@@ -472,16 +473,13 @@ Social links
  members.html
 */
 
-.members {
+.page-members,
+.page-click {
+    .fl-section {
+        min-height: auto;
+    }
     .fl-main-section {
-        background: url(../../img/png/bg/members.png) no-repeat center center fixed;
         min-height: 85vh;
-
-        @include media-breakpoint-down(sm) {
-            @media screen and (orientation: portrait) {
-                background: url(../../img/png/bg/smartphone_vertical02.png) no-repeat center center fixed;
-            }
-        }
     }
     .fl-footer {
         padding-top: 71px;
@@ -490,6 +488,37 @@ Social links
         }
     }
 }
+
+.page-members {
+    .fl-main-section {
+        background: url(../../img/png/bg/members.png) no-repeat center center fixed;
+        @include media-breakpoint-down(sm) {
+            @media screen and (orientation: portrait) {
+                background: url(../../img/png/bg/smartphone_vertical02.png) no-repeat center center fixed;
+            }
+        }
+    }
+}
+
+.page-click {
+    .fl-main-section {
+        background: url(../../img/png/bg/clickandcollect.png) no-repeat center center fixed;
+        @include media-breakpoint-down(sm) {
+            @media screen and (orientation: portrait) {
+                background: url(../../img/png/bg/smartphone_vertical03.png) no-repeat center center fixed;
+            }
+        }
+    }
+    .fl-pros {
+        @media screen and (orientation: portrait) {
+            background: url(../../img/png/bg/pros_vertical.png) no-repeat center center fixed;
+        }
+        @include media-breakpoint-up(xs) {
+            background: url(../../img/png/bg/pros.png) no-repeat center center fixed;
+        }
+    }
+}
+
 
 .fl-how-diagram {
 
@@ -529,6 +558,20 @@ Social links
     }
     .fl-use-service {
         display: none;
+    }
+}
+
+.fl-pros {
+    .fl-list-pros {
+        list-style: none;
+        padding-left: 1rem;
+        li {
+            margin: 1rem 0;
+            img {
+                margin-right: 1.5rem;
+                width: 48px;
+            }
+        }
     }
 }
 

@@ -6449,8 +6449,7 @@ H2 -> 38px
     .fl-section.fl-separation:last-of-type:before {
       bottom: -1px; }
   .fl-section.fl-testimonials {
-    min-height: inherit;
-    padding-top: 0; }
+    min-height: inherit; }
     .fl-section.fl-testimonials .fl-avatar {
       margin-bottom: 1rem; }
     .fl-section.fl-testimonials .fl-separator {
@@ -6581,17 +6580,36 @@ Social links
 /*
  members.html
 */
-.members .fl-main-section {
-  background: url(../../img/png/bg/members.png) no-repeat center center fixed;
+.page-members .fl-section,
+.page-click .fl-section {
+  min-height: auto; }
+.page-members .fl-main-section,
+.page-click .fl-main-section {
   min-height: 85vh; }
+.page-members .fl-footer,
+.page-click .fl-footer {
+  padding-top: 71px; }
+  .page-members .fl-footer .fl-brand-row,
+  .page-click .fl-footer .fl-brand-row {
+    padding-bottom: 0; }
+
+.page-members .fl-main-section {
+  background: url(../../img/png/bg/members.png) no-repeat center center fixed; }
 @media screen and (max-width: 767px) and (orientation: portrait) {
-  .members .fl-main-section {
+  .page-members .fl-main-section {
     background: url(../../img/png/bg/smartphone_vertical02.png) no-repeat center center fixed; } }
 
-.members .fl-footer {
-  padding-top: 71px; }
-  .members .fl-footer .fl-brand-row {
-    padding-bottom: 0; }
+.page-click .fl-main-section {
+  background: url(../../img/png/bg/clickandcollect.png) no-repeat center center fixed; }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .page-click .fl-main-section {
+    background: url(../../img/png/bg/smartphone_vertical03.png) no-repeat center center fixed; } }
+
+.page-click .fl-pros {
+  background: url(../../img/png/bg/pros.png) no-repeat center center fixed; }
+  @media screen and (orientation: portrait) {
+    .page-click .fl-pros {
+      background: url(../../img/png/bg/pros_vertical.png) no-repeat center center fixed; } }
 
 .fl-how-diagram .fl-buttons {
   position: relative;
@@ -6625,6 +6643,15 @@ Social links
     display: flex; }
 .fl-how-diagram .fl-use-service {
   display: none; }
+
+.fl-pros .fl-list-pros {
+  list-style: none;
+  padding-left: 1rem; }
+  .fl-pros .fl-list-pros li {
+    margin: 1rem 0; }
+    .fl-pros .fl-list-pros li img {
+      margin-right: 1.5rem;
+      width: 48px; }
 
 .fl-services {
   background-color: #f5f5f5; }

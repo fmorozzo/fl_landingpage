@@ -21,6 +21,8 @@ $(document).ready(function () {
                     $('html, body').animate({
                         scrollTop: target.offset().top //- menuHeight
                     }, 500, function () {
+                        //hide menu
+                        $('.navbar-collapse').removeClass('show');
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);

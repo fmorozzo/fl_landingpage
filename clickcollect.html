@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/css/app.css">
 </head>
 
-<body class="page-members">
+<body class="page-click">
     <div id="log"></div>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
@@ -34,26 +34,14 @@
             <div class="collapse navbar-collapse fl-justify-end" id="navbarCollapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#how">Fonctionnement<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#how">Mode d'emploi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#pros">Avantages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">T&eacute;moignages</a>
+                        <a class="nav-link fl-login-link" href="#">Login/Signup</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fl-login-link" href="#">
-                            <Login></Login>/Signup</a>
-                    </li>
-                    <!--
-                    <li class="nav-item fl-languages">
-                        <ul>
-                            <li class="nav-item active"><a class="nav-link" href="#">EN</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">FR</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">NL</a></li>
-                        </ul>
-                    </li>-->
 
                 </ul>
             </div>
@@ -64,7 +52,7 @@
     <div class="fl-section fl-main-section jumbotron jumbotron-fluid">
         <div class="container">
             <div class="fl-message-box col-10 col-sm-10 col-md-6 col-lg-6 col-xl-6 mx-auto">
-                <h2 class="display-3 slogan">Service de conciergerie connect&eacute;</h2>
+                <h2 class="display-3 slogan">Le service de conciergerie connect&eacute;</h2>
                 <br>
                 <p class="lead">Nous vous offrons la solution de conciergerie et de click&amp;collect automatique adapt&eacute;e &aacute; vos besoins</p>
                 <br>
@@ -78,13 +66,9 @@
     <a id="how"></a>
     <section class="fl-section fl-how text-center">
         <div class="container">
-            <h3 class="fl-section-heading fl-h3">Comment &ccedil;a marche ?</h3>
+            <h3 class="fl-section-heading fl-h3">Mode d'emploi Click&amp;Collect</h3>
             <br>
             <div class="fl-how-diagram">
-                <div class="fl-buttons">
-                    <button type="button" class="btn fl-toggle-btn active btn-secondary">Livraison</button>
-                    <button type="button" class="btn fl-toggle-btn btn-secondary">Services</button>
-                </div>
                 <div class="row fl-parcel-delivery active">
 
                     <div class="col-6  col-sm-6 col-md-6 col-lg-3 col-xl-3">
@@ -116,52 +100,11 @@
                     </div>
                     <!-- /.col -->
                 </div>
-                <div class="row fl-use-service">
-
-                    <div class="col-6  col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                        <img class="fl-step img-fluid" src="img/svg/picto/service/01.svg" alt="step 1">
-                        <div class="fl-step-number">1</div>
-                        <p class="fl-description">S&eacute;lectionnez un service (nettoyage à sec, repassage, ...).</p>
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                        <img class="fl-step img-fluid" src="img/svg/picto/service/02.svg" alt="step 2">
-                        <div class="fl-step-number">2</div>
-                        <p class="fl-description">Identifiez-vous avec vos informations personnelles D&eacute;posez votre ou vos articles dans le locker selectionn&eacute;.
-                        </p>
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                        <img class="fl-step img-fluid" src="img/svg/picto/service/03.svg" alt="step 3">
-                        <div class="fl-step-number">3</div>
-                        <p class="fl-description">Suivez l’&eacute;tat de votre demande de service et proc&eacute;dez au paiement en ligne via votre espace personnel.</p>
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                        <img class="fl-step img-fluid" src="img/svg/picto/service/04.svg" alt="step 4">
-                        <div class="fl-step-number">4</div>
-                        <p class="fl-description">Vous recevrez votre code d’acc&egrave;s par email/SMS d&egrave;s que votre commande sera pr&ecirc;te.
-                        </p>
-                    </div>
-                    <!-- /.col -->
-                </div>
             </div>
             <!-- .fl-how-diagram -->
             <br>
             <div class="row justify-content-center">
-                <div class="col-2 col-sm-2 col-md-1">
-                    <img src="img/svg/info.svg" alt="info icon" class="img-fluid">
-                </div>
-                <div class="col-6 col-sm-6 col-md-5">
-                    <p class="fl-subtitle text-left mb-auto">
-                        Pour commencer &agrave; utiliser nos services, il vous suffit de cr&eacute;er votre compte gratuitement !
-                    </p>
-                </div>
-                <div class="col-4 col-sm-4 col-md-2 text-right">
-                    <button class="btn btn-primary fl-btn-call-to-action">Sign up</button>
+                <div class="col-12"><a class="btn btn-primary fl-btn-email" href="mailto:info@facilitylockers.com?subject=retailers info" role="button">Contactez nous</a>
                 </div>
                 <!-- .col -->
             </div>
@@ -170,71 +113,27 @@
         <!-- .container -->
     </section>
 
-    <a id="services"></a>
-
-    <section class="fl-section fl-services text-center">
+    <a id="pros"></a>
+    <section class="fl-section fl-pros">
+        <h3 class="fl-section-heading fl-h3">Quel sont les b&eacute;n&eacute;fices?</h3>
         <div class="container">
-            <h3 class="fl-section-heading fl-h3">Nos services</h3>
-            <br>
-            <div class="row">
-                <div class="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-4 mx-auto">
-                    <p class="fl-subtitle">Pour connaître les adresses de nos <strong>Facility Lockers</strong>, veuillez d'abord vous inscrire.</p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <h4>Click &amp; Collect 2.0</h4>
+                    <ul class="fl-list-pros">
+                        <li class="d-flex"><img src="img/svg/icon/time.svg" alt="icon"><span>Service client<br><small>(moins d'attente)</small></span></li>
+                        <li class="d-flex"><img src="img/svg/icon/happy.svg" alt="icon"><span>Exp&eacute;rience client<br><small>(wahoo effect)</small></span></li>
+                        <li class="d-flex"><img src="img/svg/icon/gain.svg" alt="icon"><span>Gain op&eacute;rationnel <br><small>(d&eacute;couverte du magasin)</small></span></li>
+                    </ul>
                 </div>
                 <!-- .col -->
-            </div>
-            <!-- .row -->
-            <br>
-            <div class="row">
-                <div class="col-4  col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <img class="img-fluid" src="img/png/icon/box/parcel_delivery@2x.png" alt="service image" />
-                    <span class="fl-service-title">Livraison</span>
-                </div>
-                <!-- /.col -->
-                <div class="col-4  col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <img class="img-fluid" src="img/png/icon/box/laundry@2x.png" alt="service image" />
-                    <span class="fl-service-title">Nettoyage &agrave; sec</span>
-                </div>
-                <!-- /.col -->
-                <div class="col-4  col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <img class="img-fluid" src="img/png/icon/box/ironing@2x.png" alt="service image" />
-                    <span class="fl-service-title">Repassage</span>
-                </div>
-                <!-- /.col -->
-                <div class="col-4  col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <img class="img-fluid" src="img/png/icon/box/shoe_repair@2x.png" alt="service image" />
-                    <span class="fl-service-title">Cordonnerie</span>
-                </div>
-                <!-- /.col -->
-                <div class="col-4  col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <img class="img-fluid" src="img/png/icon/box/sewing@2x.png" alt="service image" />
-                    <span class="fl-service-title">couture</span>
-                </div>
-                <!-- /.col -->
-                <div class="col-4  col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <img class="img-fluid" src="img/png/icon/box/it_repair@2x.png" alt="service image" />
-                    <span class="fl-service-title">r&eacute;paration IT</span>
-                </div>
-                <!-- /.col -->
-            </div>
-        </div>
-        <!-- .container -->
-    </section>
-    <!-- .section -->
-
-    <a id="testimonials"></a>
-    <section class="fl-section fl-testimonials">
-        <h3 class="fl-section-heading fl-h3">Ils ont adopt&eacute; Facility Lockers</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <p class="fl-testimonial">« Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc. » </p>
-                    <p class="fl-signature">Brad P. — Actor</p>
-                    <hr class="fl-separator" />
-                </div>
-                <!-- .col -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <p class="fl-testimonial">« Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque » </p>
-                    <p class="fl-signature">Donald T. — Wigmaker</p>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <h4>Upsell &amp; cross Canal</h4>
+                    <ul class="fl-list-pros">
+                        <li class="d-flex"><img src="img/svg/icon/sample.svg" alt="icon"><span>Sampling <br><small>(&eacute;chantillon du mois)</small></span></li>
+                        <li class="d-flex"><img src="img/svg/icon/code.svg" alt="icon"><span>Code parrainage au retrait <br><small>(push and pull)</small></span></li>
+                        <li class="d-flex"><img src="img/svg/icon/traffic.svg" alt="icon"><span>Sampling <br><small>(d&eacute;couverte du magasin)</small></span></li>
+                    </ul>
                 </div>
                 <!-- .col -->
             </div>
@@ -256,70 +155,6 @@
           </a>
 
             </div>
-            <!--
-            <div class="row">
-                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <ul class="list-unstyled clear-margins">
-                        <li class="widget-container widget_nav_menu">
-                            <h6 class="title-widget">Facility Lockers</h6>
-                            <ul>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">The concept</a></li>
-                                <li><a href="#">The team</a></li>
-                                <li><a href="#">Work with us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <ul class="list-unstyled clear-margins">
-                        <li class="widget-container widget_nav_menu">
-                            <h6 class="title-widget">Members</h6>
-                            <ul>
-                                <li><a href="#">How it works
-</a></li>
-                                <li><a href="#">Services
-</a></li>
-                                <li><a href="#">Locations</a></li>
-                                <li><a href="#">Payment method</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <ul class="list-unstyled clear-margins">
-                        <li class="widget-container widget_nav_menu">
-                            <h6 class="title-widget">Retailers</h6>
-                            <ul>
-                                <li><a href="#">Click & Collect</a></li>
-                                <li><a href="#">API & Documentation</a></li>
-                                <li><a href="#">Partners</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                    <ul class="list-unstyled clear-margins">
-                        <li class="widget-container widget_nav_menu">
-                            <h6 class="title-widget">Real estates </h6>
-                            <ul>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Security matters</a></li>
-                                <li><a href="#">Lockers Catalog</a></li>
-                                <li><a href="#">Advantages</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>-->
         </div>
         <div class="container">
             <div class="row">
