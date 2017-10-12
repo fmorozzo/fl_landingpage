@@ -569,7 +569,11 @@ Social links
             margin: 1rem 0;
             img {
                 margin-right: 1.5rem;
-                width: 48px;
+                min-width: 48px;
+                min-height: 48px;
+            }
+            span {
+                align-self: center;
             }
         }
     }
