@@ -6637,7 +6637,8 @@ Social links
     line-height: 40px; }
   .fl-how-diagram .fl-parcel-delivery .fl-description,
   .fl-how-diagram .fl-use-service .fl-description {
-    font-size: 1rem; }
+    font-size: 1rem;
+    font-weight: bold; }
   .fl-how-diagram .fl-parcel-delivery.active,
   .fl-how-diagram .fl-use-service.active {
     display: flex; }
